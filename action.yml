@@ -1,0 +1,20 @@
+name: 'assing issue to project'
+description: 'assing issue to project'
+branding:
+  icon: mail
+  color: red
+inputs:
+  github-token:  
+    description: 'admin github token'
+    required: true
+  project_path:  
+    description: 'the path to the project'
+    required: true
+  
+outputs:
+  time: # id of output
+    description: 'Al Fin Se Me Dio, Como Nadie Lo Esperaba, Me Acerque Y Se Me Dio Y Como Ella Lo Queria'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

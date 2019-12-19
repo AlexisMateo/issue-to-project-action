@@ -1,0 +1,22 @@
+
+# Send email Action
+
+An action  sends a email.
+
+## Usage
+
+```yml
+- name: Send email
+    uses: AlexisMateo/sendmdail-action@1
+    with:
+      smtp-server: ${{ secrets.SMTP_SERVER }}
+      smtp-server-port: ${{ secrets.SMTP_SERVER_PORT }}
+      auth-user: ${{ secrets.AUTH_USER }}
+      auth-password: ${{secrets.EMAIL_PASSWORD }}
+      subject: correciones a ${{github.repository}}
+      body: ${{github.context.payload}}
+      from: ${{ secrets.EMAIL_FROM }}
+      to: ${{ secrets.EMAIL_RECIVER }}
+      is-tls: false
+      commit-message: true
+```

@@ -1,0 +1,17 @@
+name: Auto Assign Issue to project
+on: [issues]
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      
+      - name: assing issue to project
+        uses: ./
+        with:
+          
+
+
+
+
