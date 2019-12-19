@@ -1,8 +1,10 @@
 require('dotenv').config();
 const core = require('@actions/core');
 const github = require('@actions/github');
-const githubClient = new github.GitHub(process.env.GITHUB_TOKE);
-const PROJECT_URL = process.env.PROJECT_URL;
+
+let TOKEN = core.getInput('github-token');
+const githubClient = new github.GitHub(TOKEN || process.env.GITHUB_TOKE_DEV);
+const PROJECT_URL = core.getInput('project_path')||process.env.PROJECT_URL;
 const API_PROJECT_URL = 'https://api.github.com/users/alexismateo/projects';
 const CARD_NAME = 'Issue';
 

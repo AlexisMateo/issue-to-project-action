@@ -10,8 +10,8 @@ jobs:
       - name: assing issue to project
         uses: ./
         with:
-          
-
-
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          project_path: 'https://github.com/users/AlexisMateo/projects/2'
+    
 
 
